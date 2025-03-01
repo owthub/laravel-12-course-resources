@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 py-8">
+    <div class="container mx-auto px-4">
+        <!-- Create Blog Button -->
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-800">📜 Blog Posts</h2>
+            <a href="#" class="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+                ➕ Create New Blog
+            </a>
+        </div>
+
+        <!-- Blog Table -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <table class="w-full border-collapse">
+                <thead class="bg-gray-200 text-gray-700 uppercase text-sm">
+                    <tr>
+                        <th class="px-4 py-3 text-left">ID</th>
+                        <th class="px-4 py-3 text-left">Title</th>
+                        <th class="px-4 py-3 text-left">Description</th>
+                        <th class="px-4 py-3 text-left">Created At</th>
+                        <th class="px-4 py-3 text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-100 transition">
+                        <td class="px-4 py-3">1</td>
+                        <td class="px-4 py-3 font-semibold text-gray-900">Sample Blog Title</td>
+                        <td class="px-4 py-3 text-gray-700">This is a short description of the blog...</td>
+                        <td class="px-4 py-3 text-gray-600">01 Mar, 2025</td>
+                        <td class="px-4 py-3 flex justify-center space-x-2">
+                            <a href="#" class="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded shadow-md hover:bg-blue-600 transition">
+                                👁 View
+                            </a>
+                            <a href="#" class="px-3 py-1 bg-yellow-500 text-white text-xs font-semibold rounded shadow-md hover:bg-yellow-600 transition">
+                                ✏️ Edit
+                            </a>
+                            <button onclick="return confirm('Are you sure you want to delete this blog?')" 
+                                    class="px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded shadow-md hover:bg-red-600 transition">
+                                🗑 Delete
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-6 flex justify-center">
+            <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg">Previous</button>
+            <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg ml-2">Next</button>
+        </div>
+    </div>
+</body>
+</html>
