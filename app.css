@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Body */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dcc1c1;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Blog Container*/
+
+.container {
+    max-width: 1000px;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Blog List Table Settings */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/* Table Action Buttons */
+
+.action-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.action-buttons button:hover {
+    background-color: #0056b3;
+}
+
+a.edit-link {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+a.view-link {
+    color: #fff;
+    background-color: #2f2e2c;
+    border-color: #d58512;
+}
+
+.delete-link {
+    color: #fff;
+    background-color: #c9302c !important;
+    border-color: #ac2925 !important;
+}
+
+a.action-link,
+button.action-link {
+    display: inline-block;
+    margin-bottom: 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 22px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Create Blog Button */
+
+.create-blog-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.create-blog-button:hover {
+    background-color: #0056b3;
+}
+
+
+/*Pagination*/
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    color: #007bff;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.pagination a {
+    display: inline-block;
+}
+
+.pagination svg.w-5.h-5 {
+    display: none;
+}
+
+.pagination p.text-sm {
+    padding: 15px;
+}
+
+.pagination a[rel=next] {
+    display: none;
+}
+
+
+/* Form Input Settings */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 150px;
+}
+
+.blog-details {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button.form-btn {
+    background-color: #007bff !important;
+}
+
+table {
+    margin-top: 20px;
+}
+
+
+/* HTML Elements Settings */
+
+h2 {
+    margin-top: 0;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+p {
+    margin: 0;
+}
+
+
+/* Success message */
+
+.success-message {
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    /* White text */
+    padding: 15px;
+    /* Padding */
+    text-align: center;
+    /* Center text */
+    font-size: 18px;
+    /* Font size */
+    position: fixed;
+    /* Fixed position */
+    top: 0;
+    /* Align to the top */
+    left: 0;
+    /* Align to the left */
+    width: 100%;
+    /* Full width */
+    z-index: 1000;
+    /* Ensure it's on top of other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Drop shadow */
+    animation: slideDown 0.5s ease-in-out;
+    /* Slide down animation */
+}
+
+
+/* Slide down animation */
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+div.error {
+    color: red;
+    font-weight: 700;
+    margin-top: 10px;
+}
